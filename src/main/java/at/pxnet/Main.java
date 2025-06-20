@@ -1,8 +1,29 @@
 package at.pxnet;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        var person1 = new Person("1", "Helmut", 18, new int[]{1,2,3,4,4,4,4});
+        var person2 = new Person("2", "Harald", 20, new int[]{1,2,3,5,4});
+        var person3 = new Person("3", "Harald", 20, new int[]{1,2,3,4});
+        var person4 = new Person("4", "Harald", 20, new int[]{1,2});
+//        Grading.isFailing(person1);
+//        //new Grading();
+
+        System.out.println(Grading.isFailing(new Person("1", "Helmut", 18, new int[]{1,2,3,4,4,4,4})));
+        System.out.println(Arrays.toString(person1.getGrades()));
+
+        System.out.println(Grading.isFailing(person2));
+        System.out.println(Grading.isFailing(person3));
+        //System.out.println(University.getStudents());
+        University uni = new University();
+        uni.addStudent(person1);
+
+        //System.out.println(University.getStudents());
+        System.out.println(Grading.isFailing(person4));
+
 
         // Create a class "Person" in the at.pxnet package
         // Make sure it has a constructor to take the following parameters in order:
